@@ -1,5 +1,5 @@
 chrome.contextMenus.create({
-    title: "Search \"%s\" on Jisho.org",
+    title: "Search Jisho.org for \"%s\"",
     contexts: ["selection"],
     onclick: navigateToJishoFromContextMenu
 });

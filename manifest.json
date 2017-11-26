@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Jisho Extension",
-    "version": "0.1",
+    "version": "0.2",
     "description": "Quickly search on Jisho.org",
     
     "browser_action": {
@@ -9,8 +9,7 @@
         "default_popup": "popup.html"
     },
     "permissions": [
-        "contextMenus",
-        "tabs"
+        "contextMenus"
     ],
     "background": {
         "scripts": ["shared_functions.js", "context_menu.js"]
