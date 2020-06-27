@@ -2,17 +2,18 @@
 <html>
   <head>
     <title>Jisho Extension Popup</title>
-    <style type="text/css">
-      h1 {
-        font-size: 15px;
-      }
-    </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="wanakana.min.js"></script>
     <script src="shared_functions.js"></script>
     <script src="popup.js"></script>
   </head>
 
   <body>
     <h1>Jisho Search</h1>
-    <input type="text" id="search-text" autocomplete="off" autofocus>
+    <div>
+      <input type="text" id="search-text" autocomplete="off" autofocus></input>
+      <button id="furigana-toggle">あ</button>
+    </div>
   </body>
 </html>

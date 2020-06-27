@@ -5,3 +5,5 @@ A Chrome extension that makes it slightly more convenient to look up kanji on Ji
 
 ----
 ![screenshot](screenshot.png)
+
+Uses [Wanakana](https://github.com/WaniKani/WanaKana) for furigana input support.
