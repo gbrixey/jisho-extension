@@ -27,7 +27,11 @@ function handleKeyPress(event) {
 
 function navigateToJishoFromPopup() {
     var searchText = document.getElementById("search-text").value;
-    navigateToJisho(searchText)
+    searchText = searchText.trim();
+    
+    if (searchText != ""){
+        navigateToJisho(searchText);
+    }
 };
 
 function setFuriganaTextMode(useFurigana){
