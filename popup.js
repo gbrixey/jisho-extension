@@ -66,12 +66,13 @@ function saveFuriganaSetting(useFurigana){
 
 function loadFuriganaSetting(){
     chrome.storage.sync.get(USE_FURIGANA_SETTING_KEY, function(result){
-        if (typeof result === "undefined") {
-            // No settings, set and use default
-            saveFuriganaSetting(true);
-            setFuriganaTextMode(true);
-        } else {
+        if (result.hasOwnProperty(USE_FURIGANA_SETTING_KEY)) {
             setFuriganaTextMode(result[USE_FURIGANA_SETTING_KEY]);
+        } else {
+            // No settings, set and use default
+            var defaultFuriganaSetting = false;
+            saveFuriganaSetting(defaultFuriganaSetting);
+            setFuriganaTextMode(defaultFuriganaSetting);
         }
     });
 }

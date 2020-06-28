@@ -12,9 +12,6 @@
         "contextMenus",
         "storage"
     ],
-    "opts":{
-        "encoding": "utf8"
-    },
     "background": {
         "scripts": ["shared_functions.js", "context_menu.js"]
     },
