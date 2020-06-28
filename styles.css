@@ -2,11 +2,13 @@ h1 {
     width: 22em;
     font-size: 15px;
 }
+
 #search-text {
     display: inline-block;
     width: 20em;
     height: 2.2em;
 }
+
 #furigana-toggle {
     display: inline-block;
     margin-left: 0.5em;
@@ -18,4 +20,15 @@ h1 {
     background-color: #646464;
     color: white;
     font-weight: bold;
+    cursor: pointer;
+}
+
+#jisho-link {
+    display: inline-block;
+    padding-top: 1em;
+}
+
+#jisho-link:visited {
+    text-decoration: none;
+    color: blue;
 }

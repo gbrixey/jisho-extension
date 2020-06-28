@@ -13,8 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
     furiganaToggleButton = document.getElementById('furigana-toggle');
     wanakana.bind(searchTextField);
     loadFuriganaSetting();
-
     furiganaToggleButton.onclick = handleFuriganaToggle;
+
+    // Setup jisho link
+    var jishoLink = document.getElementById("jisho-link");
+    jishoLink.onclick = (event) => {
+        event.stopPropagation();
+        navigateToJishoHome();
+    };
 });
 
 function handleKeyPress(event) {
