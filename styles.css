@@ -3,7 +3,7 @@ h1 {
     font-size: 15px;
 }
 
-#search-text {
+.search-input {
     display: inline-block;
     width: 20em;
     height: 2.2em;

@@ -2,18 +2,21 @@ var USE_FURIGANA_SETTING_KEY = 'useFurigana';
 var USING_FURIGANA_TEXT = 'あ';
 var USING_ALPHA_TEXT = 'A';
 
-var searchTextField;
+var searchTextFieldFurigana;
+var searchTextFieldAlpha;
 var furiganaToggleButton;
 
 document.addEventListener("DOMContentLoaded", () => {
-    searchTextField = document.getElementById("search-text");
-    searchTextField.addEventListener('keypress', handleKeyPress, false);
+    searchTextFieldAlpha = document.getElementById('search-text-alpha');
+    searchTextFieldFurigana = document.getElementById('search-text-furigana');
+    searchTextFieldAlpha.addEventListener('keypress', handleKeyPress, false);
+    searchTextFieldFurigana.addEventListener('keypress', handleKeyPress, false);
 
     // Setup furigana toggle button
     furiganaToggleButton = document.getElementById('furigana-toggle');
-    wanakana.bind(searchTextField);
-    loadFuriganaSetting();
+    wanakana.bind(searchTextFieldFurigana);
     furiganaToggleButton.onclick = handleFuriganaToggle;
+    loadFuriganaSetting();
 
     // Setup jisho link
     var jishoLink = document.getElementById("jisho-link");
@@ -41,12 +44,25 @@ function navigateToJishoFromPopup() {
 };
 
 function setFuriganaTextMode(useFurigana){
+    // Switch between furigana and alpha by hiding or showing the relevant textfield
     if (useFurigana){
         furiganaToggleButton.innerHTML = USING_FURIGANA_TEXT;
-        wanakana.bind(searchTextField);
+        searchTextFieldAlpha.style.display = "none";
+        searchTextFieldFurigana.style.display = "inline";
+
+        searchTextFieldFurigana.value = wanakana.toKana(searchTextFieldAlpha.value);
+        searchTextFieldAlpha.value = '';
+
+        searchTextFieldFurigana.focus();
     }else{
         furiganaToggleButton.innerHTML = USING_ALPHA_TEXT;
-        wanakana.unbind(searchTextField);
+        searchTextFieldAlpha.style.display = "inline";
+        searchTextFieldFurigana.style.display = "none";
+
+        searchTextFieldAlpha.value = wanakana.toRomaji(searchTextFieldFurigana.value);
+        searchTextFieldFurigana.value = '';
+
+        searchTextFieldAlpha.focus();
     }
 }
 
