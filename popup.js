@@ -30,12 +30,11 @@ function handleKeyPress(event) {
     var keyCode = event.keyCode;
     // Search when Enter/Return key is pressed
     if (keyCode == 13) {
-        navigateToJishoFromPopup();
+        navigateToJishoFromPopup(event.target.value);
     }
 };
 
-function navigateToJishoFromPopup() {
-    var searchText = document.getElementById("search-text").value;
+function navigateToJishoFromPopup(searchText) {
     searchText = searchText.trim();
     
     if (searchText != ""){
