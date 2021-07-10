@@ -2,17 +2,19 @@
 <html>
   <head>
     <title>Jisho Extension Popup</title>
-    <style type="text/css">
-      h1 {
-        font-size: 15px;
-      }
-    </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <script src="shared_functions.js"></script>
     <script src="popup.js"></script>
   </head>
 
   <body>
     <h1>Jisho Search</h1>
-    <input type="text" id="search-text" autocomplete="off" autofocus>
+    <div>
+      <input type="text" id="search-text" class="search-input" autocomplete="off" title="Press enter to search" autofocus>
+    </div>
+    <div>
+      <a href="" id="jisho-link">Jisho.org</a>
+    </div>
   </body>
 </html>

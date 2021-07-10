@@ -1,0 +1,20 @@
+h1 {
+    width: 20em;
+    font-size: 15px;
+}
+
+.search-input {
+    display: inline-block;
+    width: 20em;
+    height: 2.2em;
+}
+
+#jisho-link {
+    display: inline-block;
+    padding-top: 1em;
+}
+
+#jisho-link:visited {
+    text-decoration: none;
+    color: blue;
+}
