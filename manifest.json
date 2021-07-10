@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Jisho Extension",
-    "version": "0.2",
+    "version": "0.3",
     "description": "Quickly search on Jisho.org",
     
     "browser_action": {
