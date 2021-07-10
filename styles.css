@@ -1,17 +1,29 @@
 h1 {
-    width: 20em;
     font-size: 15px;
 }
 
-.search-input {
+.content {
+    width: 360px;
+    margin: 8px;
+}
+
+#search-text {
     display: inline-block;
-    width: 20em;
-    height: 2.2em;
+    width: 70%;
+    height: 28px;
+}
+
+#search-submit {
+    display: inline-block;
+    margin-left: 10px;
+    height: 32px;
+    box-shadow: none;
+    border-radius: 3px;
 }
 
 #jisho-link {
     display: inline-block;
-    padding-top: 1em;
+    margin-top: 8px;
 }
 
 #jisho-link:visited {

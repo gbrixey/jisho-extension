@@ -5,5 +5,5 @@ chrome.contextMenus.create({
 });
 
 function navigateToJishoFromContextMenu(info, tab) {
-    navigateToJisho(info.selectionText.trim())
+    navigateToJisho(info.selectionText)
 };
