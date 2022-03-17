@@ -4,4 +4,4 @@ A Chrome extension that makes it slightly more convenient to look up kanji on Ji
 [Here is a link to the extension on the Chrome Web Store.](https://chrome.google.com/webstore/detail/jisho-extension/iblocgbegbfbikfpjajboohgnegaonho)
 
 ----
-![screenshot](screenshot.png)
+<img src="https://raw.githubusercontent.com/gbrixey/jisho-extension/main/screenshot.png" alt="Screenshot of the Jisho extension in action"/>
