@@ -1,3 +1,5 @@
+import { navigateToJisho } from "./shared_functions.js";
+
 document.addEventListener("DOMContentLoaded", () => {
     var searchTextField = document.getElementById("search-text");
     searchTextField.addEventListener('keypress', handleKeyPress, false);
