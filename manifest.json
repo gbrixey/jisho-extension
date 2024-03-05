@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Jisho Extension",
-    "version": "0.3",
+    "version": "0.4",
     "description": "Quickly search on Jisho.org",
     "action": {
         "default_icon": "icon128.png",
